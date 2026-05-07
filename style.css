@@ -21,16 +21,20 @@ nav img {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
+    background-color: rgb(244, 124, 144);
     position: sticky;
     left: 0;
     top: 0;
+    z-index: 1;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
 
     align-items: center;
     padding: 5px 15px;
     color: white;
-    background-color: rgb(244, 124, 144);
 }
 
 .burger,
@@ -51,19 +55,81 @@ nav li {
 }
 
 nav li:hover {
-    background-color: pink;
-    transition: 500ms;
+    scale: 1.2;
+    transition: 300ms;
     border-radius: 6px;
     cursor: pointer;
+}
+
+.bascet img {
+    width: 100px;
+}
+
+.bascet p {
+    color: white;
+    background-color: rgba(244, 124, 144, 0.685);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.bascet {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    right: 5px;
+    opacity: 0;
+}
+
+.bascet.active {
+    opacity: 1;
+}
+
+/* BANNER */
+.banner {
+    height: 100vh;
+    background-image: url(./bilder/background-img2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 7px solid white;
+}
+
+.banner h1 {
+    font-size: 100px;
+    color: rgb(255, 255, 215);
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 10px;
+}
+
+.banner .h1-1 {
+    position: absolute;
+    right: 140px;
+    top: 300px;
+}
+
+.banner .h1-2 {
+    position: absolute;
+    right: 140px;
+    top: 400px;
+}
+
+.banner .h1-3 {
+    position: absolute;
+    right: 140px;
+    top: 500px;
 }
 
 
 /* SECTION */
 section {
-    height: 100vh;
-    background: rgb(255, 251, 207);
+    height: fit-content;
     justify-content: center;
     border-bottom: 7px solid white;
+    background-color: rgb(255, 255, 215);
 }
 
 .grid-container {
@@ -78,21 +144,86 @@ section {
 }
 
 .grid-container img:hover {
-    scale: 1.2;
-    transition: 500ms;
+    scale: 1.09;
+    transition: 300ms;
 }
 
-/* BANNER */
-.banner {
-    height: 100vh;
-    background-color: rgb(166, 199, 237);
-    border-bottom: 7px solid white;
+.shoe-text-box {
+    transition: 500ms;
+    background-color: white;
+    border-radius: 7px;
+    padding: 16px;
+    margin: 10px;
+    padding-bottom: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
+.shoe-img2 {
+    display: none;
+}
+
+.shoe-img.active {
+    display: none;
+}
+
+.shoe-img2.active {
+    display: block;
+}
+
+.info-text {
+    margin-top: 8px;
+}
+
+.shop-btn {
+    margin-top: 40px;
+    padding: 8px 18px;
+    background-color: rgba(244, 124, 144, 0.685);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.shop-btn:hover {
+    background-color: rgb(210, 90, 110);
+}
+
+/* SECTION-2 */
+.section-2 {
+    height: 500px;
+    background-image: url(./bilder/background-img.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 
 /* FOOTER */
 footer {
-    height: 300px;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
     background-color: rgb(244, 124, 144);
+    min-height: 200px;
+}
+
+footer a {
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+footer p {
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: white;
+    width: fit-content;
 }
 
 /* @media */
@@ -100,16 +231,18 @@ footer {
 @media (width<600px) {
 
     /* NAV */
-
     .nav-links {
         display: flex;
         flex-direction: column;
         position: absolute;
         top: 0;
         right: 0;
-        gap: 5px;
-        padding: 5rem 3rem;
-        color: red;
+        line-height: 40px;
+        padding: 60px 50px;
+        color: white;
+        background-color: rgb(244, 124, 144);
+        width: fit-content;
+        border-radius: 0px 0px 0px 20px;
 
         display: none;
     }
@@ -138,6 +271,16 @@ footer {
         display: block;
     }
 
+    /* BANNER */
+
+    .banner h1 {
+        letter-spacing: 3px;
+        line-height: 100px;
+    }
+
+    .banner .h1-3 {
+        padding: 0px 30px;
+    }
 
     /* GRID/CONTAINER */
     .grid-container {
