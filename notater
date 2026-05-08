@@ -1,0 +1,16 @@
+
+
+
+
+const shoeImgEl = document.querySelector(".shoe-img")
+const shoeImg2El = document.querySelector(".shoe-img2")
+
+shoeImgEl.addEventListener("mouseover", function () {
+    shoeImgEl.classList.toggle("active")
+    shoeImg2El.classList.toggle("active")
+})
+
+shoeImg2El.addEventListener("mouseout", function () {
+    shoeImgEl.classList.toggle("active")
+    shoeImg2El.classList.toggle("active")
+})

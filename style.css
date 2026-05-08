@@ -14,6 +14,10 @@ p {
     font-size: 18px;
 }
 
+body {
+    position: relative;
+}
+
 /* NAV */
 
 nav img {
@@ -61,31 +65,54 @@ nav li:hover {
     cursor: pointer;
 }
 
-.bascet img {
+/* BASKET */
+
+.basket img {
     width: 100px;
 }
 
-.bascet p {
+.basket p {
     color: white;
     background-color: rgba(244, 124, 144, 0.685);
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 40px;
+    text-align: center;
+    margin: 0 auto;
+    width: 80px;
 }
 
-.bascet {
+.basket {
     background-color: white;
     padding: 10px;
     border-radius: 15px;
     display: flex;
     align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    z-index: 2;
 
-    position: absolute;
-    right: 5px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
     opacity: 0;
 }
 
-.bascet.active {
+.basket.active {
     opacity: 1;
+}
+
+.basket .btn {
+    padding: 3px 7px;
+    border-radius: 10px;
+    background-color: rgba(244, 124, 144, 0.685);
+    color: white;
+    border: none;
+    margin-top: 20px;
+}
+
+.basket .btn:hover {
+    scale: 1.1;
+    transition: 300ms;
 }
 
 /* BANNER */
@@ -136,6 +163,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 20px 0px;
+    width: fit-content;
 }
 
 .grid-container img {
@@ -156,19 +184,19 @@ section {
     margin: 10px;
     padding-bottom: 40px;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .shoe-img2 {
     display: none;
 }
 
-.shoe-img.active {
-    display: none;
+.img-container.active .shoe-img2 {
+    display: block;
 }
 
-.shoe-img2.active {
-    display: block;
+.img-container.active .shoe-img {
+    display: none;
 }
 
 .info-text {
@@ -274,18 +302,22 @@ footer p {
     /* BANNER */
 
     .banner h1 {
+        position: absolute;
+        left: 20px;
         letter-spacing: 3px;
         line-height: 100px;
     }
 
-    .banner .h1-3 {
-        padding: 0px 30px;
+    /* SECTION */
+    section .container {
+        display: flex;
+        justify-content: center;
     }
 
     /* GRID/CONTAINER */
     .grid-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         padding: 20px 0px;
     }
 

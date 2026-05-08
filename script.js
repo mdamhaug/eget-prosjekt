@@ -14,25 +14,26 @@ closeEl.addEventListener("click", function () {
     closeEl.classList.toggle("active")
 })
 
-const shoeImgEl = document.querySelector(".shoe-img")
-const shoeImg2El = document.querySelector(".shoe-img2")
-
-shoeImgEl.addEventListener("mouseover", function () {
-    shoeImgEl.classList.toggle("active")
-    shoeImg2El.classList.toggle("active")
-})
-
-shoeImg2El.addEventListener("mouseout", function () {
-    shoeImgEl.classList.toggle("active")
-    shoeImg2El.classList.toggle("active")
-})
-
 const shopBtnEls = document.querySelectorAll(".shop-btn")
-const bascetEl = document.querySelector(".bascet")
+const basketEl = document.querySelector(".basket")
 
 for (const shopBtnEl of shopBtnEls) {
     shopBtnEl.addEventListener("click", function () {
-        bascetEl.classList.add("active")
+        basketEl.classList.add("active")
     })
 
+}
+
+const shoeImgEls = document.querySelectorAll(".shoe-img")
+const shoeImg2Els = document.querySelectorAll(".shoe-img2")
+const imgContainerEls = document.querySelectorAll(".img-container")
+
+for (const imgContainerEl of imgContainerEls) {
+    imgContainerEl.addEventListener("mouseover", function () {
+        imgContainerEl.classList.toggle("active")
+    })
+
+    imgContainerEl.addEventListener("mouseout", function () {
+        imgContainerEl.classList.toggle("active")
+    })
 }
