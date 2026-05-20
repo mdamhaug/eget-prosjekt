@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --pink: rgb(244, 124, 144);
+            --yellow: rgb(255, 255, 215);
+            --washed-pink: rgba(244, 124, 144, 0.685);
+        }
+
+        section {
+            min-height: 1000px;
+        }
+
+        section img {
+            max-height: 200px;
+            border-radius: 10px;
+            padding-top: 10px;
+        }
+
+        section .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            text-align: center;
+        }
+
+        button {
+            margin: 50px;
+            padding: 10px;
+            margin-top: 50px;
+            font-size: 15px;
+            border: 2px solid var(--yellow);
+            border-radius: 3px;
+            background-color: var(--yellow);
+            border: 2px solid var(--pink);
+            color: var(--pink);
+        }
+
+        .options-btn {
+            text-align: center;
+        }
+
+        .option2 {
+            display: none;
+        }
+
+        .option2.active {
+            display: block;
+        }
+
+        .option1.active {
+            display: none;
+        }
+
+        button:hover {
+            background-color: var(--pink);
+            transition: 300ms;
+            color: white;
+        }
+
+        @media (width<600px) {
+            section img {
+                height: 100px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="./bilder/adidas-logo.png" alt=""></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">About us</a></li>
+                <li class="gazelle"><a href="#">Contact</a></li>
+                <li><a href="#">More</a></li>
+                <div class="close"><i class="fa-solid fa-x"></i></div>
+            </ul>
+            <div class="burger"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+
+    <section>
+        <div class="container">
+            <div><img class="option1" src="./bilder/brown-tshirt.jpg" alt=""><img class="option2"
+                    src="./bilder/blue-tshirt.jpg" alt=""></div>
+            <div><img class="option1" src="./bilder/blue-tshirt.jpg" alt=""><img class="option2"
+                    src="./bilder/polka-tshirt.jpg" alt=""></div>
+            <div><img class="option1" src="./bilder/polka-tshirt.jpg" alt=""><img class="option2"
+                    src="./bilder/brown-tshirt.jpg" alt=""></div>
+
+            <div><img class="option1" src="./bilder/blue-pants.jpg" alt=""><img class="option2"
+                    src="./bilder/pink-pants.jpg" alt=""></div>
+            <div><img class="option1" src="./bilder/pink-pants.jpg" alt=""><img class="option2"
+                    src="./bilder/red-pants.jpg" alt=""></div>
+            <div><img class="option1" src="./bilder/red-pants.jpg" alt=""><img class="option2"
+                    src="./bilder/blue-pants.jpg" alt=""></div>
+
+            <div><img class="option1" src="./bilder/blue-gazelle.jpg" alt=""><img class="option2"
+                    src="./bilder/orange-gazelle.jpg" alt=""></div>
+            <div><img class="option1" src="./bilder/orange-gazelle.jpg" alt=""><img class="option2"
+                    src="./bilder/yellow-gazelle.jpg" alt=""></div>
+            <div><img class="option1" src="./bilder/yellow-gazelle.jpg" alt=""><img class="option2"
+                    src="./bilder/blue-gazelle.jpg" alt=""></div>
+        </div>
+        <div class="options-btn"><button>more options</button></div>
+    </section>
+
+    <footer>
+        <div>
+            <p>Maria Machado Damhaug © 2026 </p>
+            <p>Images: <a target="_blank" href="https://www.zalando.no/barn-home/">www.zalando.no</a>
+                <a target="_blank" href="https://www.adidas.no/">www.adidas.no</a>
+            </p>
+        </div>
+        <div>
+            <div class="footer-a">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        const option1El = document.querySelector(".option1")
+        const option2El = document.querySelector(".option2")
+        const optionsBtnEl = document.querySelector(".options-btn")
+
+        optionsBtnEl.addEventListener("click", function () {
+            option1El.classList.toggle("active")
+            option2El.classList.toggle("active")
+            optionsBtnEl.classList.toggle("active")
+        })
+    </script>
+</body>
+
+</html>

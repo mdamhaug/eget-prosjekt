@@ -1,16 +1,7 @@
-
-
-
-
-const shoeImgEl = document.querySelector(".shoe-img")
-const shoeImg2El = document.querySelector(".shoe-img2")
-
-shoeImgEl.addEventListener("mouseover", function () {
-    shoeImgEl.classList.toggle("active")
-    shoeImg2El.classList.toggle("active")
-})
-
-shoeImg2El.addEventListener("mouseout", function () {
-    shoeImgEl.classList.toggle("active")
-    shoeImg2El.classList.toggle("active")
-})
+ <div class="about-us-section">
+            <p>Lorem ipsum dolor.</p>
+            <p class="more-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad assumenda eius,
+                suscipit quos ipsa voluptatem. Assumenda architecto labore pariatur, doloremque, corporis possimus
+                commodi voluptate temporibus beatae!</p>
+            <button class="show-more">Show more</button>
+        </div>

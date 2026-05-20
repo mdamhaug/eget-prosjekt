@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --pink: rgb(244, 124, 144);
+            --yellow: rgb(255, 255, 215);
+            --washed-pink: rgba(244, 124, 144, 0.685);
+        }
+
+        h1 {
+            font-style: italic;
+            font-family: serif;
+            font-size: 95px;
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            font-weight: 100;
+            color: var(--yellow);
+            letter-spacing: 6px;
+        }
+
+        .top {
+            min-height: 400px;
+            background: linear-gradient(90deg, var(--pink), white);
+            padding-top: 70px;
+        }
+
+        .top button {
+            padding: 10px;
+            margin-top: 50px;
+            font-size: 15px;
+            border: 2px solid var(--yellow);
+            border-radius: 3px;
+        }
+
+        .top button.collection-btn {
+            background-color: var(--yellow);
+            color: var(--pink);
+        }
+
+        .read-more {
+            background: none;
+            color: var(--yellow);
+        }
+
+        .read-more:hover {
+            background-color: var(--yellow);
+            color: var(--pink);
+            transition: 300ms;
+        }
+
+        .top a {
+            text-decoration: none;
+            color: var(--yellow);
+        }
+
+        @media (width<600px) {
+            h1 {
+                font-size: 85px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="./bilder/adidas-logo.png" alt=""></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">About us</a></li>
+                <li class="gazelle"><a href="#">Contact</a></li>
+                <li><a href="#">More</a></li>
+                <div class="close"><i class="fa-solid fa-x"></i></div>
+            </ul>
+            <div class="burger"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <div class="top">
+        <div class="container">
+            <h2>ADIDAS ORIGINALS</h2>
+            <h1>GAZELLE</h1>
+            <button class="collection-btn">See collection</button>
+            <button class="read-more"><a href="create-your-style.html">Create your style</a></button>
+        </div>
+    </div>
+
+   
+
+    <footer>
+        <div>
+            <p>Maria Machado Damhaug © 2026 </p>
+            <p>Images: <a target="_blank" href="https://www.zalando.no/barn-home/">www.zalando.no</a>
+                <a target="_blank" href="https://www.adidas.no/">www.adidas.no</a>
+            </p>
+        </div>
+        <div>
+            <div class="footer-a">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
